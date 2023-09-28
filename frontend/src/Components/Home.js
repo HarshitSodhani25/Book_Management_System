@@ -27,7 +27,7 @@ const Home = ({books, setSelectedBook, socket}) => {
                 <div className="row2">
                     <h2>Does u have a book? Upload here. </h2>
                     <Link to="/add-book" className="My_btn ">Add Book</Link>
-                    <img src="./images/bgBook.png" alt="" />
+                    {/* <img src="./images/bgBook.png" alt="" /> */}
                 </div>
             </div>
             {open && notifications.length>0 && (
