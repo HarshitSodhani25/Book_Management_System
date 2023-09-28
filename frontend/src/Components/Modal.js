@@ -6,7 +6,7 @@ const Modal = () => {
   const [book, setBook] = useState(null);
   useEffect(()=>{
     const fetchBook = async () =>{
-        const response = await fetch(`http://localhost:8080/book/${params.id}`);
+        const response = await fetch(`https://book-management-system-wlps.onrender.com/book/${params.id}`);
         const data = await response.json();
         setBook(data);
     }

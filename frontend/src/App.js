@@ -19,7 +19,7 @@ function App() {
   //for getting all books
   useEffect(() => {
     const fetchBook = async () => {
-        const response = await fetch(`http://localhost:8080/book`);
+        const response = await fetch(`https://book-management-system-wlps.onrender.com/book`);
         const data = await response.json();
         setBooks(data);
     }
