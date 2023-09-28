@@ -1,5 +1,6 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from "./Components/Home";
+import PageNotFound from "./Components/PageNotFound.js";
 import CreateForm from "./Components/CreateForm";
 import { useEffect, useState } from "react";
 import "./App.css"
@@ -69,7 +70,8 @@ useEffect(()=>{
     {path:"/", element:<Home books={books} setBooks={setBooks} setSelectedBook={setSelectedBook} socket={socket} ></Home>},
     {path:"/add-book", element:<CreateForm selectedBook = {selectedBook} setSelectedBook={setSelectedBook} handleAddBook={handleAddBook} handleUpdateBook={handleUpdateBook} handleDeleteBook={handleDeleteBook} />},
     {path:"/update-book/:id", element:<CreateForm selectedBook = {selectedBook} setSelectedBook={setSelectedBook} handleAddBook={handleAddBook} handleUpdateBook={handleUpdateBook} handleDeleteBook={handleDeleteBook} />},
-    {path: "/:id", element:<Modal/>}
+    {path: "/:id", element:<Modal/>},
+    {path: "*", element: <PageNotFound/>}
   ])
 
 
