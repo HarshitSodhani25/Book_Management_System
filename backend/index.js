@@ -13,7 +13,7 @@ const server = http.createServer(app);
 const port = process.env.PORT;
 const io = socketIo(server, {
     cors:{
-        origin: "http://localhost:3000",
+        origin: "https://book-list-x15c.onrender.com",
         methods: ["GET", "POST", "PATCH"],
         allowedHeaders: ["x-total-count"],
         credentials: true
@@ -90,6 +90,6 @@ io.on('connection', (socket)=>{
 
 
 //for starting the server on the given port
-server.listen(port, ()=>console.log(`server started at http://localhost:${port}`));
+server.listen(port, ()=>console.log(`server started`));
 
 // GET https://www.googleapis.com/books/v1/volumes?q=flowers&filter=free-ebooks&key=process.env.GOOGLE_API
